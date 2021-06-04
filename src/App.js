@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import Button from './components/Button'
+import Nav from './components/Nav'
+import BackgroundVideo from './components/BackgroundVideo'
+import { useState } from 'react'
+import Bootstrap from 'bootstrap'
+
 
 function App() {
+
+  const [name, setName] = useState("Justin");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{position: 'relative', zIndex: 1}}>
+      <BackgroundVideo />
+      <Nav />
+      <p>Where do i appear? ohh there we go</p>
     </div>
   );
 }
